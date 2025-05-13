@@ -36,7 +36,7 @@ class _figmafile_6State extends State<figmafile_6> {
           Center(
             child: Image.asset('assets/LocationImage.png',fit: BoxFit.cover,),
           ),
-          Text("hello"),
+          
         ],
       ),
     );
