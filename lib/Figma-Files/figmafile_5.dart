@@ -1,3 +1,4 @@
+import 'package:advanceproject/Figma-Files/fihmafile-6.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -81,7 +82,9 @@ class _figmafile_5State extends State<figmafile_5> {
                       Text('Resend Code',style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,fontSize: 18,color: Color(0xff53b175),),),
                      SizedBox(width:100,),
-                     FloatingActionButton(onPressed: (){},
+                     FloatingActionButton(onPressed: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>figmafile_6(),),);
+                     },
                        shape: CircleBorder(),
                   backgroundColor: Color(0xff53b175),
                        child: Center(

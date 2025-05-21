@@ -268,6 +268,7 @@
 
 import 'package:advanceproject/Components/Models/modelClass.dart';
 import 'package:advanceproject/Components/reusableImages.dart';
+import 'package:advanceproject/Figma-Files/figmafile-10.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -281,28 +282,43 @@ class FigmaFile2 extends StatefulWidget {
 class _FigmaFile2State extends State<FigmaFile2> {
 
   List<ExclussiveOfferModel> exclusiveOffer=[
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.bananaImage),
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.appleImage),
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.bananaImage),
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.appleImage),
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.bananaImage),
-    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: '\$4.99', AppImage: AppImages.appleImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.bananaImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.appleImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.bananaImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.appleImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.bananaImage),
+    ExclussiveOfferModel(mainText: 'Organic banana', subText: '7pcs', priceText: 'RS: \$4.99', AppImage: AppImages.appleImage),
 
- ];
-List<ExclussiveOfferModel> bestSelling=[
-  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: '\$5.80', AppImage: AppImages.mirchImage),
-  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: '\$5.10', AppImage: AppImages.mirchImage),
-  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: '\$5.40', AppImage: AppImages.mirchImage),
-  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: '\$5.20', AppImage: AppImages.mirchImage),
-];
+  ];
+  List<ExclussiveOfferModel> bestSelling=[
+  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: 'RS: \$5.80', AppImage: AppImages.mirchImage),
+  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: 'RS: \$5.10', AppImage: AppImages.mirchImage),
+  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: 'RS: \$5.40', AppImage: AppImages.mirchImage),
+  ExclussiveOfferModel(mainText: 'Mirch', subText: '10pcs', priceText: 'RS: \$5.20', AppImage: AppImages.mirchImage),
+  ];
+  List<ExclussiveOfferModel> groceries=[
+  ExclussiveOfferModel(mainText: 'Pulses', subText: '', priceText: '', AppImage: AppImages.puzzlsImage),
+  ExclussiveOfferModel(mainText: 'Puzzles', subText: '', priceText: '', AppImage: AppImages.puzzlsImage2),
+    ExclussiveOfferModel(mainText: 'Pulses', subText: '', priceText: '', AppImage: AppImages.puzzlsImage),
+    ExclussiveOfferModel(mainText: 'Pulses', subText: '', priceText: '', AppImage: AppImages.puzzlsImage),
+  ];
+  List<ExclussiveOfferModel> newList=[
+    ExclussiveOfferModel(mainText: 'Beef Bone', subText: '1kg priceg', priceText: 'RS: \$4.3', AppImage: AppImages.puzzlsImage),
+    ExclussiveOfferModel(mainText: 'Brailor Chicken', subText: '1kg priceg', priceText: 'RS: \$5', AppImage: AppImages.puzzlsImage2),
+    ExclussiveOfferModel(mainText: 'Beef Bone', subText: '1kg priceg', priceText: 'RS: \$4.3', AppImage: AppImages.puzzlsImage),
+    ExclussiveOfferModel(mainText: 'Brailor Chicken', subText: '1kg priceg', priceText: 'RS: \$5', AppImage: AppImages.puzzlsImage2),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bottomNavigationBar: BottomNavigationBar(
+      //     currentIndex: ,
+      //     items: ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 10,),
+            SizedBox(height: 15,),
             Center(
               child:
               Image.asset('assets/carret pic.png'),
@@ -311,14 +327,17 @@ List<ExclussiveOfferModel> bestSelling=[
             SizedBox(
               height: 23,
               width: 163,
-              child: Row(
-                children: [
-                  Center(child: Icon(Icons.location_on_rounded,size:18,color: Color(0xff4c4f4d), ),),
-                  Center(
-                    child:
-                    Text('Dahaka,Banassre',style:GoogleFonts.poppins(color: Color(0xff4c4d4f),fontSize: 18,fontWeight: FontWeight.w600),),
-                  )
-                ],
+              child: Center(
+                child: Row(
+                  children: [
+                    Center(child: Icon(Icons.location_on_rounded,size:18,color: Color(0xff4c4f4d), ),),
+                    Center(
+                      child:
+                      Text('Khyber Pakhtun Khawa',style:GoogleFonts.poppins(
+                          color: Color(0xff4c4d4f),fontSize: 18,fontWeight: FontWeight.w600),),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 10,),
@@ -378,11 +397,9 @@ List<ExclussiveOfferModel> bestSelling=[
                                     fontWeight: FontWeight.w500,fontSize: 14,color: Color(0xff53b175),),),
                               ],
                             ),
-
                           ],
                         ),
                       ),
-
                     ],
                   ),
                   Stack(
@@ -471,7 +488,7 @@ List<ExclussiveOfferModel> bestSelling=[
              SizedBox(height: 5,),
             SizedBox(
               height: 30,
-              width: 360,
+              width: 380,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -493,70 +510,62 @@ List<ExclussiveOfferModel> bestSelling=[
                   SizedBox(width: 20,),
                   Expanded(
                       child:
-                      // GridView.builder(
-                      //   scrollDirection: Axis.horizontal,
-                      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1,mainAxisSpacing:10 ),
-                      //     itemBuilder: (context,index){
-                      //   return Container(
-                      //     margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                      //     decoration: BoxDecoration(
-                      //       borderRadius: BorderRadius.circular(10),
-                      //       border: Border.all(color: Color(0xff000000),width: 2,),
-                      //     ),
-                      //   );
-                      //   },
-                      // ),
                     ListView.builder(
                       scrollDirection: Axis.horizontal,
                         itemCount:exclusiveOffer.length,
                         itemBuilder:(context,index){
-                          return Container(
-                            height:230,
-                            width: 160,
-                            margin: EdgeInsets.all(10),
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(width: 2,color: Color(0xff000000),),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child:Center(
-                              child:
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(exclusiveOffer[index].AppImage.toString()),
-                                  Text(exclusiveOffer[index].mainText.toString(),style: GoogleFonts.aclonica(color: Color(0xff000000),fontSize: 12,fontWeight: FontWeight.w600),),
-                                  Text(exclusiveOffer[index].subText.toString()),
-                                  SizedBox(height: 10,),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      SizedBox(width: 10,),
-                                      Text(exclusiveOffer[index].priceText.toString()),
-                                      SizedBox(width: 30,),
-                                      FloatingActionButton(onPressed: (){},
-                                      backgroundColor: Colors.green,
-
-                                        child: Icon(Icons.add,color: Color(0xffffffff),),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-
+                          return InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>figmafile_10()));
+                            },
+                            child: Container(
+                              height:250,
+                              width: 160,
+                              margin: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                border: Border.all(width: 2,color: Color(0xff000000),),
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                            ) ,
+                              child:Center(
+                                child:
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(exclusiveOffer[index].AppImage.toString()),
+                                    Text(exclusiveOffer[index].mainText.toString(),style: GoogleFonts.aclonica(color: Color(0xff000000),
+                                        fontSize: 13,fontWeight: FontWeight.w600),),
+                                    Text(exclusiveOffer[index].subText.toString()),
+                                    SizedBox(height: 10,),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        SizedBox(width: 10,),
+                                        Text(exclusiveOffer[index].priceText.toString(),style: GoogleFonts.poppins(fontWeight: FontWeight.w600),),
+                                        // SizedBox(width: 10,),
+                                        FloatingActionButton(onPressed: (){},
+                                        backgroundColor: Colors.green,
+
+                                          child: Icon(Icons.add,color: Color(0xffffffff),),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ) ,
+                            ),
                           );
                         },
                     ),
                   ),
-                  SizedBox(width: 40,),
+                  // SizedBox(width: 40,),
                 ],
               ),
             ),
             SizedBox(height: 10,),
             SizedBox(
-              height: 29,
-              width: 368,
+              height: 40,
+              width: 380,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -569,37 +578,148 @@ List<ExclussiveOfferModel> bestSelling=[
                 ],
               ),
             ),
+            SizedBox(height: 15,),
+            SizedBox(
+              width: 550,
+              height: 248,
+              child: Row(
+                children: [
+                  SizedBox(width: 20,),
+                  Expanded(
+                      child:ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                          itemCount:bestSelling.length ,
+                          itemBuilder: (context,index){
+                          return Container(
+                            height: 250,
+                            width: 160,
+                            margin: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Color(0xff000000),width: 2),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(bestSelling[index].AppImage.toString()),
+                                  Text(bestSelling[index].mainText.toString(),style: GoogleFonts.aclonica(
+                                    fontSize: 14,color: Color(0xff030303),fontWeight: FontWeight.w600
+                                  ),
+                                  ),
+                                  Text(bestSelling[index].subText.toString()),
+                                  SizedBox(height: 5,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                    Text(bestSelling[index].priceText.toString(),style: GoogleFonts.poppins(fontWeight: FontWeight.w600),),
+                                      FloatingActionButton(onPressed: (){},backgroundColor: Colors.green,
+                                      child: Icon(Icons.add,color: Colors.white,),),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10,),
+                                ],
+                              ),
+                            ),
+                          );
+                          }
+                      ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            SizedBox(
+              height: 30,
+              width: 380,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // SizedBox(width: 30,),
+                  Text('Groceries',style: GoogleFonts.poppins(
+                    fontSize: 24,fontWeight: FontWeight.w600,color: Color(0xff030303),
+                  ),
+                  ),
+                  Text('See all',style: GoogleFonts.poppins(
+                    fontSize: 16,fontWeight: FontWeight.w600,color: Color(0xff53b175),
+                  ),
+                  ),
+                ]
+              ),
+            ),
+            SizedBox(height: 10,),
+            SizedBox(
+             height: 110,
+              width: 530,
+              child:
+              Expanded(child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                  itemCount: groceries.length,
+                  itemBuilder: (context,index){
+                    return Container(
+                      height: 100,
+                      width: 245,
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Color(0xfff8a44c),
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      padding: EdgeInsets.all(10),
+                      child: Center(
+                        child: Row(
+                          children: [
+                            Image.asset(groceries[index].AppImage.toString(),),
+                            SizedBox(width: 10,),
+                            Text(groceries[index].mainText.toString(),style: GoogleFonts.poppins(
+                              fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3e423f)),),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+            SizedBox(height: 10,),
+            SizedBox(
+              height: 248,
+              width: 550,
+              child: Expanded(child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: newList.length,
+                itemBuilder: (context,index){
+                  return Container(
+                    height: 245,
+                    width: 155,
+                    margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Color(0xff000000),width: 3),
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset(newList[index].AppImage.toString(),),
+                        Text(newList[index].mainText.toString(),style: GoogleFonts.aclonica(
+                            fontSize: 16,fontWeight: FontWeight.w600,color: Color(0xff181725),),),
+                        Text(newList[index].priceText.toString(),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(newList[index].priceText.toString(),style: GoogleFonts.poppins(
+                                fontSize: 18,fontWeight: FontWeight.w600,color: Color(0xff181725),),),
+                            FloatingActionButton(onPressed: (){},backgroundColor: Color(0xff53b175),
+                                child: Icon(Icons.add,color: Color(0xffffffff),),),
+                          ],
+                        )
+                      ],
+                    ),
+                  );
 
-            // SizedBox(height: 10,),
-            // SizedBox(
-            //   child:
-            //   ListView.builder(
-            //     scrollDirection: Axis.horizontal,
-            //       itemCount:exclusiveOffer.length,
-            //       itemBuilder: (context,index){
-            //         return Container(
-            //           height: 230,
-            //           width: 160,
-            //           margin: EdgeInsets.all(10),
-            //           decoration: BoxDecoration(
-            //             border: Border.all(color: Color(0xff000000),),
-            //             borderRadius: BorderRadius.circular(10),
-            //
-            //           ),
-            //           child: Center(
-            //             child: Column(
-            //               // mainAxisAlignment: MainAxisAlignment.center,
-            //               children: [
-            //                 Image.asset(exclusiveOffer[index].AppImage.toString()),
-            //                 Text(exclusiveOffer[index].mainText.toString()),
-            //                 Text(exclusiveOffer[index].subText.toString()),
-            //                 Text(exclusiveOffer[index].priceText.toString()),
-            //               ],
-            //             ),
-            //           ),
-            //         );
-            //       }),
-            // ),
+                },),),
+            )
 
           ],
         ),

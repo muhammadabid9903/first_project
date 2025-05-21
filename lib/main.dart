@@ -1,18 +1,26 @@
 import'package:advanceproject/Constant_testing_Screen.dart';
 import 'package:advanceproject/Figma-Files/Fima-File_3.dart';
 import 'package:advanceproject/Figma-Files/figmafile-1.dart';
+import 'package:advanceproject/Figma-Files/figmafile-10.dart';
 import 'package:advanceproject/Figma-Files/figmafile_2.dart';
 import 'package:advanceproject/Figma-Files/figmafile_4.dart';
 import 'package:advanceproject/Figma-Files/figmafile_5.dart';
+import 'package:advanceproject/Figma-Files/figmafile_7.dart';
 import 'package:advanceproject/Figma-Files/fihmafile-6.dart';
 import 'package:advanceproject/GridView.bulder.dart';
+import 'package:advanceproject/firebase_options.dart';
 import 'package:advanceproject/screens/SplashScreens/SplashScreen.dart';
  import 'package:advanceproject/screens/UpdatesScreeen/UpdateScreen.dart';
  import 'package:advanceproject/screens/outh-screens/login-screen.dart';
 import 'package:advanceproject/screens/stackScreens/figma_file2.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -45,15 +53,17 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-          // home: FigmaFile2(),
-        // home: figmafile_1(),
+        home: FigmaFile2(),
+         // home: figmafile_1(),
       // home: figmafile_4(),
       //     home: figmafile_2(),
       // home: figmafile_1(),
-      // home: figmafiles_3(),
+      //  home: figmafiles_3(),
       //  home: figmafile_4(),
       //   home: figmafile_5(),
-        home: figmafile_6(),
+      //     home: figmafile_6(),
+      //      home: figmafile_7(),
+      //   home: figmafile_10()
     );
   }
 }

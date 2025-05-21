@@ -22,7 +22,8 @@ class _figmafiles_3State extends State<figmafiles_3> {
                 width: 413,
                 height: 375,
                 child: Positioned.fill(child: Image.asset('assets/Figma-Files3-pic.png',
-                          height:374, width:413,fit: BoxFit.cover,),
+                           height:374, width:413,
+                  fit: BoxFit.cover,),
                       ),
               ),
               Row(
